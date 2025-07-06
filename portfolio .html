@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mayank Verma | Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-primary: #2ecc71;
+      --green-dark: #27ae60;
+      --green-light: #a8e6cf;
+      --bg-light: #f4fdf7;
+      --text-dark: #1e2e23;
+      --text-light: #ecf0f1;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-light);
+      margin: 0;
+      padding: 0;
+      color: var(--text-dark);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    body.dark-mode {
+      background-color: #10271e;
+      color: var(--text-light);
+    }
+    header {
+      background: linear-gradient(90deg, var(--green-dark), var(--green-primary));
+      color: var(--text-light);
+      padding: 2rem 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    #typing {
+      font-weight: 400;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    body.dark-mode main {
+      background: #1b372b;
+    }
+    h1, h2, h3 {
+      color: var(--green-dark);
+    }
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3 {
+      color: var(--green-light);
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .project {
+      background: var(--green-light);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+      margin-bottom: 1rem;
+    }
+    body.dark-mode .project {
+      background: #256d4a;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .project a {
+      color: var(--green-dark);
+    }
+    .contact {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    a {
+      color: var(--green-dark);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--green-light);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      main {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌗 Toggle Mode</button>
+    <h1>Mayank Verma</h1>
+    <div id="typing"></div>
+  </header>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I’m a versatile full-stack developer with expertise in Java, JavaScript, C, C++, Python, Go, HTML, SQL, Rust, and Swift. I specialize in building efficient, scalable, and user-friendly software solutions.</p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Languages: Java, Python, C++, Rust, Go, JavaScript, Swift, SQL, HTML</li>
+        <li>Tools: Git, Docker, PostgreSQL, SwiftUI, Flask, Go Fiber</li>
+        <li>Web & Mobile Development, System Programming, API Design</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Portfolio Projects</h2>
+      <div class="project">
+        <h3>SwiftTask – iOS To-Do App</h3>
+        <p>Task tracker built with Swift & SwiftUI. <a href="#">GitHub</a> | <a href="#">Live Demo</a></p>
+      </div>
+      <div class="project">
+        <h3>DevPort – Portfolio Generator</h3>
+        <p>Auto-generates developer portfolios using GitHub API. <a href="#">GitHub</a> | <a href="#">Live Demo</a></p>
+      </div>
+      <div class="project">
+        <h3>SysMon – Terminal System Monitor</h3>
+        <p>Rust & C++ based system monitor. <a href="#">GitHub</a></p>
+      </div>
+      <div class="project">
+        <h3>GoServe – Blog API</h3>
+        <p>Scalable blog backend with JWT & PostgreSQL. <a href="#">GitHub</a></p>
+      </div>
+      <div class="project">
+        <h3>CodeFixer – Online Code Debugger</h3>
+        <p>Java/WebAssembly code checker. <a href="#">GitHub</a></p>
+      </div>
+      <div class="project">
+        <h3>EduTrack – Student Progress Tracker</h3>
+        <p>C++ & SQLite desktop app. <a href="#">GitHub</a></p>
+      </div>
+      <div class="project">
+        <h3>QuickSite – Static Website Builder</h3>
+        <p>Website builder using JSON templates. <a href="#">GitHub</a></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Mini Projects</h2>
+      <ul>
+        <li>Rust CLI Password Manager</li>
+        <li>Java Chat App (Sockets)</li>
+        <li>Weather App using OpenWeather API</li>
+        <li>Tic Tac Toe with AI (C)</li>
+        <li>Live Markdown Editor (Go)</li>
+      </ul>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Available for freelance projects on <a href="https://fiverr.com/MayankVerma">Fiverr</a>.</p>
+      <p><a href="#">Download Resume (PDF)</a></p>
+      <p>
+        <a href="#">LinkedIn</a> | 
+        <a href="#">GitHub</a> | 
+        <a href="#">Twitter</a>
+      </p>
+    </section>
+  </main>
+
+  <script>
+    const roles = ["Full-Stack Dev.", "Software Dev."];
+    let i = 0, j = 0, current = '', isDeleting = false;
+    const typing = document.getElementById('typing');
+
+    function type() {
+      if (i < roles.length) {
+        if (!isDeleting && j <= roles[i].length) {
+          current = roles[i].substring(0, j++);
+        } else if (isDeleting && j > 0) {
+          current = roles[i].substring(0, j--);
+        }
+        typing.textContent = current;
+
+        if (!isDeleting && j === roles[i].length) {
+          isDeleting = true;
+          setTimeout(type, 1000);
+        } else if (isDeleting && j === 0) {
+          isDeleting = false;
+          i = (i + 1) % roles.length;
+          setTimeout(type, 300);
+        } else {
+          setTimeout(type, isDeleting ? 50 : 100);
+        }
+      }
+    }
+
+    type();
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>
